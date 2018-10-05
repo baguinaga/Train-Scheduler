@@ -12,11 +12,74 @@
 </head>
 
 <body>
+  <div class="jumbotron jumbotron-fluid bg-light text-center mb-0">
+    <h1>Train Scheduler</h1>
+  </div>
+
+  <div class="container">
+    <div class="row">
+      <!-- Accordian Form -->
+      <div class="col-12 my-4" id="accordion">
+        <div class="card">
+          <div class="card-header" id="formHeading">
+            <h5 class="mb-0">
+              <button class="btn btn-link" data-toggle="collapse" data-target="#form" aria-expanded="true"
+                aria-controls="form">
+                <i class="fas fa-plus-square"></i> &nbsp;Add Train to Scheduler
+              </button>
+            </h5>
+          </div>
+
+          <div id="form" class="collapse" aria-labelledby="formHeading" data-parent="#accordion">
+            <div class="container my-2">
+              <form id="employee-form">
+                <div class="form-group">
+                  <label for="name">Train Line</label>
+                  <input type="text" class="form-control" id="name" placeholder="Train Line Name">
+                </div>
+                <div class="form-group">
+                  <label for="role">Destination</label>
+                  <input type="text" class="form-control" id="city" placeholder="Destination City">
+                </div>
+                <div class="form-group">
+                  <label for="role">First Departure (HH:mm) </label>
+                  <input type="text" class="form-control" id="departure" placeholder="First Departure">
+                </div>
+                <div class="form-group">
+                  <label for="role">Frequency (Minutes)</label>
+                  <input type="text" class="form-control" id="frequency" placeholder="Train Arrival Frequency">
+                </div>
+                <button type="submit" class="btn btn-primary">Submit</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- table column -->
+      <div class="col-12">
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th scope="col">Train Line</th>
+              <th scope="col">Destination</th>
+              <th scope="col">Frequency</th>
+              <th scope="col">Next Arrival</th>
+              <th scope="col">Minutes Away</th>
+            </tr>
+          </thead>
+          <tbody id="trainTable">
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.13.0/umd/popper.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.2/js/bootstrap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.2/moment.min.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/5.5.3/firebase.js"></script>
   <script src="assets/javascript/script.js"></script>
 
 </body>
