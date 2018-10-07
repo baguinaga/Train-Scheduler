@@ -25,29 +25,30 @@
             <h5 class="mb-0">
               <button class="btn btn-link" data-toggle="collapse" data-target="#form" aria-expanded="true"
                 aria-controls="form">
-                <i class="fas fa-plus-square"></i> &nbsp;Add Train to Scheduler
+                <i class="fas fa-plus-square"></i> &nbsp;Add Train to Schedule
               </button>
             </h5>
           </div>
 
           <div id="form" class="collapse" aria-labelledby="formHeading" data-parent="#accordion">
             <div class="container my-2">
-              <form id="employee-form">
+              <form id="form">
                 <div class="form-group">
                   <label for="name">Train Line</label>
-                  <input type="text" class="form-control" id="name" placeholder="Train Line Name">
+                  <input type="text" class="form-control" id="name" placeholder="Train Line Name" required>
                 </div>
                 <div class="form-group">
                   <label for="role">Destination</label>
-                  <input type="text" class="form-control" id="city" placeholder="Destination City">
+                  <input type="text" class="form-control" id="city" placeholder="Destination City" required>
                 </div>
                 <div class="form-group">
-                  <label for="role">First Departure (HH:mm) </label>
-                  <input type="text" class="form-control" id="departure" placeholder="First Departure">
+                  <label for="role">First Departure </label>
+                  <input type="time" class="form-control" id="time" placeholder="First Departure" required>
                 </div>
                 <div class="form-group">
                   <label for="role">Frequency (Minutes)</label>
-                  <input type="text" class="form-control" id="frequency" placeholder="Train Arrival Frequency">
+                  <input type="number" min="0" max="60" class="form-control" id="frequency" placeholder="Train Arrival Frequency"
+                    required>
                 </div>
                 <button type="submit" class="btn btn-primary">Submit</button>
               </form>
