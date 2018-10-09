@@ -1,5 +1,5 @@
 #hero-banner {
-  background-image: url("../images/nj-transit.jpg");
+  background-image: url("../images/nj-transit.png");
   width: 100%;
   background-repeat: no-repeat;
   background-position: center center;
@@ -10,5 +10,5 @@
   font-family: 'Poppins', sans-serif;
   font-size: 3.5em;
   color:white;
-  text-shadow: 3px 3px black;
+  text-shadow: 2px 2px 2px black; 
 }

@@ -1,5 +1,5 @@
 // Initialize Firebase
-var config = {
+const config = {
   apiKey: "AIzaSyDs4XpeSdXlCZIfbJCZ6WfW-AFh4d3sMOM",
   authDomain: "classactivity-9843d.firebaseapp.com",
   databaseURL: "https://classactivity-9843d.firebaseio.com",
@@ -10,6 +10,20 @@ var config = {
 firebase.initializeApp(config);
 
 const database = firebase.database();
+
+const update = function () {
+  const currentTime = moment();
+  $("#date").html(currentTime.format("ddd, MMMM Do YYYY"));
+  $("#clock").html(currentTime.format("hh:mm:ss A"));
+}
+
+const updateInterval = function () {
+  update();
+  setInterval(update, 1000);
+}
+
+updateInterval();
+
 
 $("#form").on("submit", function (event) {
   event.preventDefault();
@@ -54,8 +68,6 @@ database.ref().on("child_added", function (childSnapshot) {
   console.log(departFreq);
 
   const departTimeConverted = moment(departTime, "X").subtract(1, "years");
-
-  const currentTime = moment();
 
   const differenceTime = moment().diff(moment(departTimeConverted), "minutes");
 
