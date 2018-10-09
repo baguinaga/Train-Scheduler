@@ -17,12 +17,12 @@ const update = function () {
   $("#clock").html(currentTime.format("hh:mm:ss A"));
 }
 
-const updateInterval = function () {
+const updateTime = function () {
   update();
-  setInterval(update, 1000);
+  const updateInterval = setInterval(update, 1000);
 }
 
-updateInterval();
+updateTime();
 
 
 $("#form").on("submit", function (event) {
