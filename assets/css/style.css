@@ -1,3 +1,25 @@
+body {
+  background: url(../images/small_steps.png);
+}
+
+th, td {
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+}
+
+.subHeader {
+  text-align: center;
+  font-family: 'PT Serif', serif;
+}
+
+.card-header {
+  background-color: white;
+}
+
+.table {
+  background: white;
+}
+
 #hero-banner {
   background-image: url("../images/nj-transit.png");
   width: 100%;
